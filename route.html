@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="bus.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUP Bus Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #00ff00;
+            font-weight: bold;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f6f8f9;
+        }
+        .table-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .route-name {
+            min-width: 150px;
+        }
+        .route-details {
+            min-width: 400px;
+        }
+        .contact {
+            min-width: 200px;
+        }
+    </style>
+	
+	
+	
+</head>
+<body>
+    <div class="table-title">BUP Bus Schedule</div>
+    <button onclick="goBack()" style="padding: 8px 16px; font-size: 16px; cursor: pointer;">
+  &#8592; Back
+</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+    <table>
+        <thead>
+            <tr>
+                <th>Bus Type</th>
+                <th>Route No.</th>
+                <th>Bus No.</th>
+                <th class="route-details">Route</th>
+                <th>Morning</th>
+                <th>Noon</th>
+                <th>Afternoon</th>
+                <th class="contact">Driver Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Route Buses -->
+            <tr>
+                <td>Route Bus</td>
+                <td>1</td>
+                <td>0470, 0472</td>
+                <td>House Building → Azampur → Rajlaxmi → Jasimuddin → Airport → Kawla → Khilkhet → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>07:45</td>
+                <td></td>
+                <td></td>
+                <td>Israfil - 01921195966, Sharif - 01718445521</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>2</td>
+                <td>0353, 0354, 0494</td>
+                <td>Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Madhubagh → Gulshan Link Road → Uttar Badda → Shahjadpur → Jamuna Future Park → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>07:20</td>
+                <td></td>
+                <td></td>
+                <td>Barek - 01743941318, Mostaf - 01710511060, Ashraf - 01766110564</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>3</td>
+                <td></td>
+                <td>BUP → ECB Cantonment → Kalshi → ECB Square → Shewra → Jamuna Future Park → Shahjadpur → Uttar Badda → Gulshan Link Road → Madhubagh → Rampura Bridge</td>
+                <td></td>
+                <td>12:35</td>
+                <td>03:00</td>
+                <td>Barek - 01743941318, Mostaf - 01710511060, Ashraf - 01766110564</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>4</td>
+                <td>0293</td>
+                <td>Kakrail → Moghbazar → Satrasta Mor → Mohakhali → Banani → ECB → BUP</td>
+                <td>07:35</td>
+                <td></td>
+                <td></td>
+                <td>Jishm - 01842019252</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>5</td>
+                <td></td>
+                <td>BUP → ECB Cantonment → Kalshi → ECB Square → Navy Head Quarters → Banani → Mohakhali → Satrasta Mor</td>
+                <td></td>
+                <td>12:35</td>
+                <td>03:00</td>
+                <td>Jishm - 01842019252</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>6</td>
+                <td>0426, 0300</td>
+                <td>Shahbagh → Banglamotor → Kawran Bazar → Farmgate → Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>07:30</td>
+                <td></td>
+                <td></td>
+                <td>Faizlu - 01678687354, Prashankar - 01719900729</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>7</td>
+                <td></td>
+                <td>BUP → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate → Farmgate → Kawran Bazar</td>
+                <td></td>
+                <td>12:35</td>
+                <td>03:00</td>
+                <td>Faizlu - 01678687354, Prashankar - 01719900729</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>8</td>
+                <td>0291, 0295</td>
+                <td>Agargaon → Talatala → Shewrapara → Kazipara → Mirpur 10 → Mirpur 11 → Mirpur 12 → BUP</td>
+                <td>07:45</td>
+                <td></td>
+                <td></td>
+                <td>Nur Alam - 01732284039, Badsha - 01758927462</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>9</td>
+                <td>0402, 0301</td>
+                <td>Residential School &amp; College → Isha Mosque → Suchana Community Center → Adabor Thana → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Cine Cinema Hall → Commerce College → Proshika → Mirpur 11 → Mirpur 12 → BUP</td>
+                <td>07:30</td>
+                <td></td>
+                <td></td>
+                <td>Selman - 01988798596, Zainal - 01717156260</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>10</td>
+                <td></td>
+                <td>BUP → Mirpur 12 → Mirpur 11 → Proshika → Commerce College → Cine Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli</td>
+                <td></td>
+                <td>12:35</td>
+                <td>03:00</td>
+                <td>Selman - 01988798596, Zainal - 01717156260</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>11</td>
+                <td>0471, 0424</td>
+                <td>City College → Bijoy Sarani → Dhanmondi 15 → Shankar → 27 Rapa Plaza → Asad Gate → College Gate → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Cine Cinema Hall → Commerce College → Proshika → Mirpur 11 → Mirpur 12 → BUP</td>
+                <td>07:25</td>
+                <td></td>
+                <td></td>
+                <td>Tayeb - 01728223081, Obaidul - 01740811628</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>12</td>
+                <td></td>
+                <td>BUP → Mirpur 12 → Mirpur 11 → Proshika → Commerce College → Cine Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → College Gate → Asad Gate → Manik Mia Avenue</td>
+                <td></td>
+                <td>12:35</td>
+                <td>03:00</td>
+                <td>Tayeb - 01728223081, Obaidul - 01740811628</td>
+            </tr>
+            <tr>
+                <td>Route Bus</td>
+                <td>13</td>
+                <td>0292, 0401</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>08:05</td>
+                <td></td>
+                <td></td>
+                <td>Alamin - 01722153376, Galap - 01764170403</td>
+            </tr>
+            
+            <!-- Shuttle Buses -->
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0353+0569</td>
+                <td>BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate</td>
+                <td>9:15 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0494+0300</td>
+                <td>BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate</td>
+                <td>9:20 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0426+0301</td>
+                <td>BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate</td>
+                <td>9:20 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>14</td>
+                <td>0291+0293+0296</td>
+                <td>BUP → DOHS</td>
+                <td>9:25 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>0292+4962+0295</td>
+                <td>Mirpur 12 → BUP</td>
+                <td>9:40 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>14</td>
+                <td>0291+0293+0296</td>
+                <td>DOHS → BUP</td>
+                <td>9:45 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0353+0569</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>10:05 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0494+0300</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>10:10 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0426+0301</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>10:15 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>0292+4962+0295</td>
+                <td>BUP → Mirpur 12</td>
+                <td>10:15 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>0294</td>
+                <td>Mirpur 12 → BUP</td>
+                <td>10:50 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0424+0471</td>
+                <td>BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate</td>
+                <td>10:50 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0301+0402</td>
+                <td>BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate</td>
+                <td>10:55 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0426+0300</td>
+                <td>BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate</td>
+                <td>10:55 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>0294</td>
+                <td>BUP → Mirpur 12</td>
+                <td>11:25 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0424+0471</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>11:30 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>14</td>
+                <td>0296</td>
+                <td>BUP → DOHS</td>
+                <td>11:30 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0301+0402</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>11:35 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>13</td>
+                <td>0426+0300</td>
+                <td>Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP</td>
+                <td>11:35 am</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>4962</td>
+                <td>Mirpur 12 → BUP</td>
+                <td></td>
+                <td>12:00 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>14</td>
+                <td>0296</td>
+                <td>DOHS → BUP</td>
+                <td></td>
+                <td>12:00 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>4962</td>
+                <td>BUP → Mirpur 12</td>
+                <td></td>
+                <td>12:35 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>14</td>
+                <td>0294</td>
+                <td>BUP → DOHS</td>
+                <td></td>
+                <td>1:00 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>0295</td>
+                <td>Mirpur 12 → BUP</td>
+                <td></td>
+                <td>1:15 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>14</td>
+                <td>0294</td>
+                <td>DOHS → BUP</td>
+                <td></td>
+                <td>1:15 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shuttle Bus</td>
+                <td>15</td>
+                <td>0295</td>
+                <td>BUP → Mirpur 12</td>
+                <td></td>
+                <td>1:45 pm</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+	
+	
+	<button onclick="goBack()" style="padding: 8px 16px; font-size: 16px; cursor: pointer;">
+  &#8592; Back
+</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+	
+</body>
+</html>
