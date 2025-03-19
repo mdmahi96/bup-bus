@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="bus.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Bus Schedule</title>
+    <title>BUP Express</title>
     <style>
         :root {
             --primary: #0d8f4e;
@@ -295,14 +296,15 @@
         <div class="container">
             <div class="logo">
                 <i>🚌</i>
-                <h1>Campus Connect</h1>
+                <h1>BUP Expresss</h1>
+				<img src="bus.png" class="profile-img" style="width:10%; margin:-99px auto;" align="right">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Bus Schedule</a></li>
-                    <li><a href="#">Routes</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="route.html">Routes</a></li>
+                    <li><a href="https://mdmahi96.github.io/mahi.com">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -318,23 +320,24 @@
                          <select id="route" name="route">
                             <option value="">Select a route</option>
                             <!-- Updated Route Numbers -->
-                            <option value="route-1">Route 1: House Building → BUP</option>
-                            <option value="route-2">Route 2: Kakrail → BUP</option>
-                            <option value="route-3">Route 3: Kakrail → BUP (Return)</option>
-                            <option value="route-4">Route 4: Kakrail → BUP (Moghbazar)</option>
-                            <option value="route-5">Route 5: BUP → Satrasta Mor (Return)</option>
-                            <option value="route-6">Route 6: Shahbagh → BUP</option>
-                            <option value="route-7">Route 7: BUP → Kawran Bazar (Return)</option>
-                            <option value="route-8">Route 8: Agargaon → BUP</option>
-                            <option value="route-9">Route 9: Residential School → BUP</option>
-                            <option value="route-10">Route 10: BUP → Shyamoli (Return)</option>
-                            <option value="route-11">Route 11: City College → BUP</option>
-                            <option value="route-12">Route 12: BUP → Manik Mia Ave (Return)</option>
-                            <option value="route-13">Route 13: Jahangir Gate → BUP</option>
+                            <option value="route-1">Route 1:   House Building → BUP</option>
+							<option value="route-2">Route 2:   Kakrail → Mouchak → BUP</option>
+							<option value="route-4">Route 4:   Kakrail → Moghbazar → BUP </option>
+							<option value="route-6">Route 6:   Shahbagh → BUP</option>
+							<option value="route-8">Route 8:   Agargaon → BUP</option>
+							<option value="route-9">Route 9:   Residential School → BUP</option>
+							<option value="route-11">Route 11: City College → BUP</option>
+							<option value="route-13">Route 13: Jahangir Gate → BUP</option>
+							<option value="route-3">Route 3:   BUP → Kakrail (Return)</option>
+							<option value="route-5">Route 5:   BUP → Satrasta Morc(Return)</option>
+							<option value="route-7">Route 7:   BUP → Kawran Bazar (Return)</option>
+							<option value="route-10">Route 10: BUP → Shyamoli (Return)</option>
+							<option value="route-12">Route 12: BUP → Manik Mia Ave (Return)</option>
                             <!-- Shuttles -->
-                            <option value="shuttle-13">Shuttle 13: Jahangir Gate/BUP</option>
-                            <option value="shuttle-14">Shuttle 14: DOHS/BUP</option>
-                            <option value="shuttle-15">Shuttle 15: Mirpur 12/BUP</option>
+							<b>
+                            <option value="shuttle-13">Shuttle 13: Jahangir Gate → BUP (Shuttle)</option>
+                            <option value="shuttle-14">Shuttle 14: DOHS → BUP (Shuttle)</option>
+                            <option value="shuttle-15">Shuttle 15: Mirpur 12 → BUP (Shuttle)</option> </b>
                         </select>
                         <div class="error-message" id="route-error">Please select a route</div>
                     </div>
@@ -1225,5 +1228,11 @@ const busRoutes = [
             }
         });
     </script>
+	
+	<footer style="text-align: center; color: #3a5a78; font-size: 0.85rem; padding: 20px; background-color: #f5f7fa; border-top: 1px solid #e0e5eb; margin-top: 50px;">
+    <p>This is not an official website. It serves as a digital copy of the notice board provided by the <strong>MT Section</strong>. Bus schedules, routes, and other information are subject to change. Please refer to the official notice for the latest updates.</p>
+    <p style="margin-top: 15px; color: #2c3e50;">&copy; 2025 <strong><a href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi</a></strong>.</br> All rights reserved.</p>
+</footer>
+
 </body>
 </html>
