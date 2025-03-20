@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="bus.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUP Express</title>
-    <style>
+<link rel="icon" type="image/x-icon" href="bus.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUP Express</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+
+
+<style>
         :root {
             --primary: #0d8f4e;
             --secondary: #f37021;
@@ -290,949 +297,155 @@
             100% { transform: rotate(360deg); }
         }
     </style>
-</head>
-<body>
-    <header>
+
+
+
+
+
+
+
+<body class="bg-gray-100 min-h-screen p-4">
+  <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <!-- Header with animated gradient background -->
+	
+	
+	
+	<header>
         <div class="container">
             <div class="logo">
                 <i>🚌</i>
                 <h1>BUP Expresss</h1>
-				<img src="bus.png" class="profile-img" style="width:10%; margin:-99px auto;" align="right">
+                <img src="bus.png" class="profile-img" style="width:10%; margin:-99px auto;" align="right">
             </div>
             <nav>
                 <ul>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="route.html">Routes</a></li>
-                    <li><a href="https://mdmahi96.github.io/mahi.com">Contact</a></li>
+                    <li><a href="https://mdmahi96.github.io/mahi.com/?i=1">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+	
+	
+	
+	
+	
     
-    <main class="container">
-        <section class="search-section">
-            <h2>Find Your Bus</h2>
-            <form class="search-form" id="search-form">
-                <div class="search-row">
-                    <div class="search-field">
-                        <label for="route">Route</label>
-                         <select id="route" name="route">
-                            <option value="">Select a route</option>
-                            <!-- Updated Route Numbers -->
-                            <option value="route-1">Route 1:   House Building → BUP</option>
-							<option value="route-2">Route 2:   Kakrail → Mouchak → BUP</option>
-							<option value="route-4">Route 4:   Kakrail → Moghbazar → BUP </option>
-							<option value="route-6">Route 6:   Shahbagh → BUP</option>
-							<option value="route-8">Route 8:   Agargaon → BUP</option>
-							<option value="route-9">Route 9:   Residential School → BUP</option>
-							<option value="route-11">Route 11: City College → BUP</option>
-							<option value="route-13">Route 13: Jahangir Gate → BUP</option>
-							<option value="route-3">Route 3:   BUP → Kakrail (Return)</option>
-							<option value="route-5">Route 5:   BUP → Satrasta Morc(Return)</option>
-							<option value="route-7">Route 7:   BUP → Kawran Bazar (Return)</option>
-							<option value="route-10">Route 10: BUP → Shyamoli (Return)</option>
-							<option value="route-12">Route 12: BUP → Manik Mia Ave (Return)</option>
-                            <!-- Shuttles -->
-							<b>
-                            <option value="shuttle-13">Shuttle 13: Jahangir Gate → BUP (Shuttle)</option>
-                            <option value="shuttle-14">Shuttle 14: DOHS → BUP (Shuttle)</option>
-                            <option value="shuttle-15">Shuttle 15: Mirpur 12 → BUP (Shuttle)</option> </b>
-                        </select>
-                        <div class="error-message" id="route-error">Please select a route</div>
-                    </div>
-                    
-                    <div class="search-field">
-                        <label for="busType">Bus Type</label>
-                        <select id="busType" name="busType">
-                            <option value="">All Types</option>
-                            <option value="Route Bus">Route Bus</option>
-                            <option value="Shuttle Bus">Shuttle Bus</option>
-                        </select>
-                    </div>
-                    
-                    <div class="search-field">
-                        <label for="time">Time</label>
-                        <select id="time" name="time">
-                            <option value="">All Times</option>
-                            <option value="morning">Morning</option>
-                            <option value="noon">Noon</option>
-                            <option value="afternoon">Afternoon</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="search-button">Search Buses</button>
-                </div>
-            </form>
-        </section>
-        
-        <div class="loading" id="loading">
-            <div class="loading-spinner"></div>
-            <p>Searching for buses...</p>
+    <!-- Search section -->
+    <div class="p-6 bg-gray-50 border-b border-gray-200">
+      <div class="relative max-w-2xl mx-auto">
+        <div class="flex shadow-md rounded-lg overflow-hidden animate__animated animate__fadeIn animate__delay-0s">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Enter stoppage name..."
+            class="w-full p-4 border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+          >
+          <button 
+            id="search-button"
+            class="bg-blue-700 text-white px-6 hover:bg-blue-800 transition duration-200 flex items-center justify-center"
+            aria-label="Search"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span class="ml-2 hidden md:inline">Search</span>
+          </button>
         </div>
         
-        <section class="results-section" id="results-section">
-            <div class="results-header">
-                <h2>Available Buses</h2>
-                <div class="sort-options">
-                    <button class="sort-button active" data-sort="busNum">Bus Number</button>
-                    <button class="sort-button" data-sort="route">Route</button>
-                    <button class="sort-button" data-sort="time">Departure Time</button>
-                </div>
+        <div id="suggestion-container" class="absolute z-10 w-full bg-white border border-gray-300 rounded-b-lg shadow-lg max-h-64 overflow-y-auto mt-1 hidden">
+          <!-- Suggestions will be populated here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Results section -->
+    <div class="p-6">
+      <div id="results-container">
+        <!-- Initial message -->
+        <div id="initial-message" class="text-center p-10 bg-gray-50 rounded-lg border border-gray-200 animate__animated animate__fadeIn">
+          <div class="mb-6">
+            <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 9 20-5v12L2 21V9Z"/><path d="M6 12v5"/><path d="M10 9v9"/></svg>
             </div>
-            
-            <div class="no-results" id="no-results">
-                <h3>No buses found</h3>
-                <p>We couldn't find any buses matching your search criteria. Please try different options.</p>
-            </div>
-            
-            <div class="route-list" id="route-list">
-                <!-- Route cards will be dynamically added here -->
-            </div>
-        </section>
-    </main>
-    
-    <script>
-        // Complete updated database of bus routes from both documents
-const busRoutes = [
-    // Route Bus 1
-    {
-        id: 1,
-        busNumber: "0470",
-        routeNumber: "route-1",
-        routeName: "Route-1",
-        busType: "Route Bus",
-        route: "House Building → Azampur → Rajlaxmi → Jasimuddin → Airport → Kawla → Khilkhet → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:45",
-        noon: "",
-        afternoon: "",
-        drivers: "Israfil - 01921195966"
-    },
-    {
-        id: 2,
-        busNumber: "0472",
-        routeNumber: "route-1",
-        routeName: "Route-1",
-        busType: "Route Bus",
-        route: "House Building → Azampur → Rajlaxmi → Jasimuddin → Airport → Kawla → Khilkhet → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:45",
-        noon: "",
-        afternoon: "",
-        drivers: "Sharif - 01718445521"
-    },
-    
-    // Route Bus 2
-    {
-        id: 3,
-        busNumber: "0353",
-        routeNumber: "route-2",
-        routeName: "Route-2",
-        busType: "Route Bus",
-        route: "Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Madhubagh → Gulshan Link Road → Uttar Badda → Shahjadpur → Jamuna Future Park → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:20",
-        noon: "",
-        afternoon: "",
-        drivers: "Barek - 01743941318"
-    },
-    {
-        id: 4,
-        busNumber: "0354",
-        routeNumber: "route-2",
-        routeName: "Route-2",
-        busType: "Route Bus",
-        route: "Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Madhubagh → Gulshan Link Road → Uttar Badda → Shahjadpur → Jamuna Future Park → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:20",
-        noon: "",
-        afternoon: "",
-        drivers: "Mostaf - 01710511060"
-    },
-    {
-        id: 5,
-        busNumber: "0494",
-        routeNumber: "route-2",
-        routeName: "Route-2",
-        busType: "Route Bus",
-        route: "Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Madhubagh → Gulshan Link Road → Uttar Badda → Shahjadpur → Jamuna Future Park → Shewra → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:20",
-        noon: "",
-        afternoon: "",
-        drivers: "Ashraf - 01766110564"
-    },
-    
-    // Route Bus 3 (Return)
-    {
-        id: 6,
-        busNumber: "0353",
-        routeNumber: "route-3",
-        routeName: "Route-3",
-        busType: "Route Bus",
-        route: "BUP → ECB Cantonment → Kalshi → ECB Square → Shewra → Jamuna Future Park → Shahjadpur → Uttar Badda → Gulshan Link Road → Madhubagh → Rampura Bridge",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Barek - 01743941318"
-    },
-    {
-        id: 7,
-        busNumber: "0354",
-        routeNumber: "route-3",
-        routeName: "Route-3",
-        busType: "Route Bus",
-        route: "BUP → ECB Cantonment → Kalshi → ECB Square → Shewra → Jamuna Future Park → Shahjadpur → Uttar Badda → Gulshan Link Road → Madhubagh → Rampura Bridge",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Mostaf - 01710511060"
-    },
-    {
-        id: 8,
-        busNumber: "0494",
-        routeNumber: "route-3",
-        routeName: "Route-3",
-        busType: "Route Bus",
-        route: "BUP → ECB Cantonment → Kalshi → ECB Square → Shewra → Jamuna Future Park → Shahjadpur → Uttar Badda → Gulshan Link Road → Madhubagh → Rampura Bridge",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Ashraf - 01766110564"
-    },
-    
-    // Route Bus 4
-    {
-        id: 9,
-        busNumber: "0293",
-        routeNumber: "route-4",
-        routeName: "Route-4",
-        busType: "Route Bus",
-        route: "Kakrail → Moghbazar → Satrasta Mor → Mohakhali → Banani → ECB → BUP",
-        morning: "07:35",
-        noon: "",
-        afternoon: "",
-        drivers: "Jishm - 01842019252"
-    },
-    
-    // Route Bus 5 (Return)
-    {
-        id: 10,
-        busNumber: "0293",
-        routeNumber: "route-5",
-        routeName: "Route-5",
-        busType: "Route Bus",
-        route: "BUP → ECB Cantonment → Kalshi → ECB Square → Navy Head Quarters → Banani → Mohakhali → Satrasta Mor",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Jishm - 01842019252"
-    },
-    
-    // Route Bus 6
-    {
-        id: 11,
-        busNumber: "0426",
-        routeNumber: "route-6",
-        routeName: "Route-6",
-        busType: "Route Bus",
-        route: "Shahbagh → Banglamotor → Kawran Bazar → Farmgate → Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:30",
-        noon: "",
-        afternoon: "",
-        drivers: "Faizlu - 01678687354"
-    },
-    {
-        id: 12,
-        busNumber: "0300",
-        routeNumber: "route-6",
-        routeName: "Route-6",
-        busType: "Route Bus",
-        route: "Shahbagh → Banglamotor → Kawran Bazar → Farmgate → Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "07:30",
-        noon: "",
-        afternoon: "",
-        drivers: "Prashankar - 01719900729"
-    },
-    
-    // Route Bus 7 (Return)
-    {
-        id: 13,
-        busNumber: "0426",
-        routeNumber: "route-7",
-        routeName: "Route-7",
-        busType: "Route Bus",
-        route: "BUP → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate → Farmgate → Kawran Bazar",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Faizlu - 01678687354"
-    },
-    {
-        id: 14,
-        busNumber: "0300",
-        routeNumber: "route-7",
-        routeName: "Route-7",
-        busType: "Route Bus",
-        route: "BUP → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate → Farmgate → Kawran Bazar",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Prashankar - 01719900729"
-    },
-    
-    // Route Bus 8
-    {
-        id: 15,
-        busNumber: "0291",
-        routeNumber: "route-8",
-        routeName: "Route-8",
-        busType: "Route Bus",
-        route: "Agargaon → Talatala → Shewrapara → Kazipara → Mirpur 10 → Mirpur 11 → Mirpur 12 → BUP",
-        morning: "07:45",
-        noon: "",
-        afternoon: "",
-        drivers: "Nur Alam - 01732284039"
-    },
-    {
-        id: 16,
-        busNumber: "0295",
-        routeNumber: "route-8",
-        routeName: "Route-8",
-        busType: "Route Bus",
-        route: "Agargaon → Talatala → Shewrapara → Kazipara → Mirpur 10 → Mirpur 11 → Mirpur 12 → BUP",
-        morning: "07:45",
-        noon: "",
-        afternoon: "",
-        drivers: "Badsha - 01758927462"
-    },
-    
-    // Route Bus 9
-    {
-        id: 17,
-        busNumber: "0402",
-        routeNumber: "route-9",
-        routeName: "Route-9",
-        busType: "Route Bus",
-        route: "Residential School & College → Isha Mosque → Suchana Community Center → Adabor Thana → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Cine Cinema Hall → Commerce College → Proshika → Mirpur 11 → Mirpur 12 → BUP",
-        morning: "07:30",
-        noon: "",
-        afternoon: "",
-        drivers: "Selman - 01988798596"
-    },
-    {
-        id: 18,
-        busNumber: "0301",
-        routeNumber: "route-9",
-        routeName: "Route-9",
-        busType: "Route Bus",
-        route: "Residential School & College → Isha Mosque → Suchana Community Center → Adabor Thana → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Cine Cinema Hall → Commerce College → Proshika → Mirpur 11 → Mirpur 12 → BUP",
-        morning: "07:30",
-        noon: "",
-        afternoon: "",
-        drivers: "Zainal - 01717156260"
-    },
-    
-    // Route Bus 10 (Return)
-    {
-        id: 19,
-        busNumber: "0402",
-        routeNumber: "route-10",
-        routeName: "Route-10",
-        busType: "Route Bus",
-        route: "BUP → Mirpur 12 → Mirpur 11 → Proshika → Commerce College → Cine Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Selman - 01988798596"
-    },
-    {
-        id: 20,
-        busNumber: "0301",
-        routeNumber: "route-10",
-        routeName: "Route-10",
-        busType: "Route Bus",
-        route: "BUP → Mirpur 12 → Mirpur 11 → Proshika → Commerce College → Cine Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Zainal - 01717156260"
-    },
-    
-    // Route Bus 11
-    {
-        id: 21,
-        busNumber: "0471",
-        routeNumber: "route-11",
-        routeName: "Route-11",
-        busType: "Route Bus",
-        route: "City College → Bijoy Sarani → Dhanmondi 15 → Shankar → 27 Rapa Plaza → Asad Gate → College Gate → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Cine Cinema Hall → Commerce College → Proshika → Mirpur 11 → Mirpur 12 → BUP",
-        morning: "07:25",
-        noon: "",
-        afternoon: "",
-        drivers: "Tayeb - 01728223081"
-    },
-    {
-        id: 22,
-        busNumber: "0424",
-        routeNumber: "route-11",
-        routeName: "Route-11",
-        busType: "Route Bus",
-        route: "City College → Bijoy Sarani → Dhanmondi 15 → Shankar → 27 Rapa Plaza → Asad Gate → College Gate → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Cine Cinema Hall → Commerce College → Proshika → Mirpur 11 → Mirpur 12 → BUP",
-        morning: "07:25",
-        noon: "",
-        afternoon: "",
-        drivers: "Obaidul - 01740811628"
-    },
-    
-    // Route Bus 12 (Return)
-    {
-        id: 23,
-        busNumber: "0471",
-        routeNumber: "route-12",
-        routeName: "Route-12",
-        busType: "Route Bus",
-        route: "BUP → Mirpur 12 → Mirpur 11 → Proshika → Commerce College → Cine Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → College Gate → Asad Gate → Manik Mia Avenue",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Tayeb - 01728223081"
-    },
-    {
-        id: 24,
-        busNumber: "0424",
-        routeNumber: "route-12",
-        routeName: "Route-12",
-        busType: "Route Bus",
-        route: "BUP → Mirpur 12 → Mirpur 11 → Proshika → Commerce College → Cine Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → College Gate → Asad Gate → Manik Mia Avenue",
-        morning: "",
-        noon: "12:35",
-        afternoon: "03:00",
-        drivers: "Obaidul - 01740811628"
-    },
-    
-    // Route Bus 13
-    {
-        id: 25,
-        busNumber: "0292",
-        routeNumber: "route-13",
-        routeName: "Route-13",
-        busType: "Route Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "08:05",
-        noon: "",
-        afternoon: "",
-        drivers: "Alamin - 01722153376"
-    },
-    {
-        id: 26,
-        busNumber: "0401",
-        routeNumber: "route-13",
-        routeName: "Route-13",
-        busType: "Route Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "08:05",
-        noon: "",
-        afternoon: "",
-        drivers: "Galap - 01764170403"
-    },
-    
-    // Shuttle Bus 13
-    {
-        id: 27,
-        busNumber: "0353+0569",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
-        morning: "09:15",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 28,
-        busNumber: "0494+0300",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
-        morning: "09:20",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 29,
-        busNumber: "0426+0301",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
-        morning: "09:20",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 30,
-        busNumber: "0353+0569",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13 (Return)",
-        busType: "Shuttle Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "10:05",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 31,
-        busNumber: "0494+0300",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13 (Return)",
-        busType: "Shuttle Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "10:10",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 32,
-        busNumber: "0426+0301",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13 (Return)",
-        busType: "Shuttle Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "10:15",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 33,
-        busNumber: "0424+0471",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
-        morning: "10:50",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 34,
-        busNumber: "0301+0402",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
-        morning: "10:55",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 35,
-        busNumber: "0426+0300",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS → ECB Cantonment → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
-        morning: "10:55",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 36,
-        busNumber: "0424+0471",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13 (Return)",
-        busType: "Shuttle Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "11:30",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 37,
-        busNumber: "0301+0402",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13 (Return)",
-        busType: "Shuttle Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "11:35",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 38,
-        busNumber: "0426+0300",
-        routeNumber: "shuttle-13",
-        routeName: "Shuttle-13 (Return)",
-        busType: "Shuttle Bus",
-        route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Cantonment → DOHS → BUP",
-        morning: "11:35",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    
-    // Shuttle Bus 14
-    {
-        id: 39,
-        busNumber: "0291+0293+0296",
-        routeNumber: "shuttle-14",
-        routeName: "Shuttle-14",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS",
-        morning: "09:25",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 40,
-        busNumber: "0291+0293+0296",
-        routeNumber: "shuttle-14",
-        routeName: "Shuttle-14 (Return)",
-        busType: "Shuttle Bus",
-        route: "DOHS → BUP",
-        morning: "09:45",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 41,
-        busNumber: "0296",
-        routeNumber: "shuttle-14",
-        routeName: "Shuttle-14",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS",
-        morning: "11:30",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 42,
-        busNumber: "0296",
-        routeNumber: "shuttle-14",
-        routeName: "Shuttle-14 (Return)",
-        busType: "Shuttle Bus",
-        route: "DOHS → BUP",
-        morning: "12:00",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 43,
-        busNumber: "0294",
-        routeNumber: "shuttle-14",
-        routeName: "Shuttle-14",
-        busType: "Shuttle Bus",
-        route: "BUP → DOHS",
-        morning: "",
-        noon: "01:00",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 44,
-        busNumber: "0294",
-        routeNumber: "shuttle-14",
-        routeName: "Shuttle-14 (Return)",
-        busType: "Shuttle Bus",
-        route: "DOHS → BUP",
-        morning: "",
-        noon: "01:15",
-        afternoon: "",
-        drivers: ""
-    },
-    
-    // Shuttle Bus 15
-    {
-        id: 45,
-        busNumber: "0292+4962+0295",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "Mirpur 12 → BUP",
-        morning: "09:40",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 46,
-        busNumber: "0292+4962+0295",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "BUP → Mirpur 12",
-        morning: "10:15",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 47,
-        busNumber: "0294",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "Mirpur 12 → BUP",
-        morning: "10:50",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 48,
-        busNumber: "0294",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "BUP → Mirpur 12",
-        morning: "11:25",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 49,
-        busNumber: "4962",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "Mirpur 12 → BUP",
-        morning: "12:00",
-        noon: "",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 50,
-        busNumber: "4962",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "BUP → Mirpur 12",
-        morning: "",
-        noon: "12:35",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 51,
-        busNumber: "0295",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "Mirpur 12 → BUP",
-        morning: "",
-        noon: "01:15",
-        afternoon: "",
-        drivers: ""
-    },
-    {
-        id: 52,
-        busNumber: "0295",
-        routeNumber: "shuttle-15",
-        routeName: "Shuttle-15",
-        busType: "Shuttle Bus",
-        route: "BUP → Mirpur 12",
-        morning: "",
-        noon: "01:45",
-        afternoon: "",
-        drivers: ""
-    }
-];
+          </div>
+          <h3 class="text-xl font-medium text-gray-800">Search for Stoppages</h3>
+          <p class="text-gray-500 mt-2">Enter a stoppage name to find associated bus routes</p>
+        </div>
         
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchForm = document.getElementById('search-form');
-            const routeList = document.getElementById('route-list');
-            const resultsSection = document.getElementById('results-section');
-            const noResults = document.getElementById('no-results');
-            const loading = document.getElementById('loading');
-            const sortButtons = document.querySelectorAll('.sort-button');
-            
-            // Event listener for form submission
-            searchForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Show loading
-                loading.style.display = 'block';
-                resultsSection.style.display = 'none';
-                
-                // Get form values
-                const routeValue = document.getElementById('route').value;
-                const busTypeValue = document.getElementById('busType').value;
-                const timeValue = document.getElementById('time').value;
-                
-                // Validate form
-                let isValid = true;
-                
-                if (!routeValue) {
-                    document.getElementById('route-error').style.display = 'block';
-                    isValid = false;
-                } else {
-                    document.getElementById('route-error').style.display = 'none';
-                }
-                
-                if (!isValid) {
-                    loading.style.display = 'none';
-                    return;
-                }
-                
-                // Filter buses based on selection
-                setTimeout(function() {
-                    let filteredBuses = busRoutes.filter(bus => {
-                        if (routeValue && bus.routeNumber !== routeValue) {
-                            return false;
-                        }
-                        
-                        if (busTypeValue && bus.busType !== busTypeValue) {
-                            return false;
-                        }
-                        
-                        if (timeValue) {
-                            if (timeValue === 'morning' && !bus.morning) {
-                                return false;
-                            }
-                            if (timeValue === 'noon' && !bus.noon) {
-                                return false;
-                            }
-                            if (timeValue === 'afternoon' && !bus.afternoon) {
-                                return false;
-                            }
-                        }
-                        
-                        return true;
-                    });
-                    
-                    // Display results
-                    displayResults(filteredBuses);
-                    
-                    // Hide loading
-                    loading.style.display = 'none';
-                    resultsSection.style.display = 'block';
-                }, 800); // Simulated loading time
-            });
-            
-            // Function to display filtered buses
-            function displayResults(buses) {
-                routeList.innerHTML = '';
-                
-                if (buses.length === 0) {
-                    noResults.style.display = 'block';
-                    return;
-                }
-                
-                noResults.style.display = 'none';
-                
-                buses.forEach(bus => {
-                    const routeCard = document.createElement('div');
-                    routeCard.className = 'route-card';
-                    
-                    // Determine relevant time period
-                    let timePeriod = '';
-                    let timeValue = '';
-                    
-                    if (bus.morning) {
-                        timePeriod = 'Morning';
-                        timeValue = bus.morning;
-                    } else if (bus.noon) {
-                        timePeriod = 'Noon';
-                        timeValue = bus.noon;
-                    } else if (bus.afternoon) {
-                        timePeriod = 'Afternoon';
-                        timeValue = bus.afternoon;
-                    }
-                    
-                    routeCard.innerHTML = `
-                        <div class="route-operator">
-                            <div class="operator-name">${bus.routeName}</div>
-                            <div class="bus-details">
-                                <span>Bus #${bus.busNumber}</span>
-                                <span class="bus-type">${bus.busType}</span>
-                            </div>
-                            <div class="route-info">
-                                <p>${bus.route}</p>
-                            </div>
-                            ${bus.drivers ? `<div class="driver-info">Driver: ${bus.drivers}</div>` : ''}
-                        </div>
-                        <div class="route-timing">
-                            <div class="timing-container">
-                                <div class="time-label">${timePeriod} Departure</div>
-                                <div class="time-value">${timeValue}</div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    routeList.appendChild(routeCard);
-                });
-            }
-            
-            // Sort functionality
-            sortButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    sortButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    const sortType = this.getAttribute('data-sort');
-                    const routeCards = Array.from(document.querySelectorAll('.route-card'));
-                    
-                    if (routeCards.length === 0) return;
-                    
-                    // Sort route cards
-                    routeCards.sort((a, b) => {
-                        if (sortType === 'busNum') {
-                            const aNum = a.querySelector('.bus-details span').textContent.replace('Bus #', '');
-                            const bNum = b.querySelector('.bus-details span').textContent.replace('Bus #', '');
-                            return aNum.localeCompare(bNum);
-                        } else if (sortType === 'route') {
-                            const aRoute = a.querySelector('.operator-name').textContent;
-                            const bRoute = b.querySelector('.operator-name').textContent;
-                            return aRoute.localeCompare(bRoute);
-                        } else if (sortType === 'time') {
-                            const aTime = a.querySelector('.time-value').textContent;
-                            const bTime = b.querySelector('.time-value').textContent;
-                            
-                            // Convert to minutes for comparison
-                            const aMinutes = timeToMinutes(aTime);
-                            const bMinutes = timeToMinutes(bTime);
-                            
-                            return aMinutes - bMinutes;
-                        }
-                    });
-                    
-                    // Re-append sorted cards
-                    routeList.innerHTML = '';
-                    routeCards.forEach(card => routeList.appendChild(card));
-                });
-            });
-            
-            // Helper function to convert time to minutes for sorting
-            function timeToMinutes(timeString) {
-                if (!timeString) return 9999; // Place empty times at the end
-                
-                const [hours, minutes] = timeString.split(':').map(Number);
-                return hours * 60 + minutes;
-            }
-        });
-    </script>
-	
-	<footer style="text-align: center; color: #3a5a78; font-size: 0.85rem; padding: 20px; background-color: #f5f7fa; border-top: 1px solid #e0e5eb; margin-top: 50px;">
+        <!-- No results message (initially hidden) -->
+        <div id="no-results" class="text-center p-10 bg-gray-50 rounded-lg border border-gray-200 hidden animate__animated animate__fadeIn">
+          <div class="text-gray-400 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto opacity-50"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <p class="text-gray-700 font-medium text-lg">No buses found for "<span id="no-results-term"></span>"</p>
+          <p class="text-gray-500 mt-2">Please try searching for another stoppage</p>
+        </div>
+        
+        <!-- Results table (initially hidden) -->
+        <div id="results-table-container" class="hidden animate__animated animate__fadeIn">
+          <div class="flex items-center mb-4">
+            <div class="w-2 h-6 bg-blue-600 mr-3"></div>
+            <h2 class="text-xl font-semibold text-gray-800">Buses via <span id="selected-stoppage" class="text-blue-700"></span></h2>
+          </div>
+          
+          <!-- Sort options -->
+          <div class="mb-4 flex flex-wrap gap-2">
+            <div class="text-sm text-gray-600 flex items-center mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h10"/><path d="M11 8h7"/><path d="M11 12h4"/></svg>
+              Sort by:
+            </div>
+            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="routeNo">Route No</button>
+            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="morning">Noon Time</button>
+            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="noon">Morning Time</button>
+			</div>
+            <!--button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="afternoon"></button>
+          
+		 
+          
+          <!-- Note about times -->
+          <div class="mb-4 p-3 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm rounded">
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              <span><strong>Note:</strong> Times shown are for starting point location of each route.</span>
+            </div>
+          </div>
+          
+          <div class="overflow-x-auto rounded-lg shadow">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route No.</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bus No.</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Morning</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Noon</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Afternoon</th>
+                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Driver Contact</th>
+                </tr>
+              </thead>
+              <tbody id="results-table-body" class="bg-white divide-y divide-gray-200">
+                <!-- Results will be populated here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+      <footer style="text-align: center; color: #3a5a78; font-size: 0.85rem; padding: 20px; background-color: #f5f7fa; border-top: 1px solid #e0e5eb; margin-top: 50px;">
     <p>This is not an official website. It serves as a digital copy of the notice board provided by the <strong>MT Section</strong>. Bus schedules, routes, and other information are subject to change. Please refer to the official notice for the latest updates.</p>
     <p style="margin-top: 15px; color: #2c3e50;">&copy; 2025 <strong><a href="https://mdmahi96.github.io/mahi.com/">MD Muztaba Rafid Mahi</a></strong>.</br> All rights reserved.</p>
 </footer>
+    
+  </div>
 
+  <!-- Scripts -->
+  <script src="js/busData.js"></script>
+  <script src="js/app.js"></script>
 </body>
+
+
+
 </html>
