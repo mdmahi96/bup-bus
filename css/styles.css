@@ -1,0 +1,81 @@
+/* Additional styles beyond Tailwind */
+.hidden {
+  display: none;
+}
+
+/* For better mobile experience */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Sort button active state */
+.sort-button.active {
+  background-color: #1d4ed8;
+  color: white;
+  border-color: #1d4ed8;
+}
+
+/* Animation for bus icon */
+.bus-animation {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 17h2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10h2'/%3E%3Cpath d='M14 17H9'/%3E%3Ccircle cx='6.5' cy='17.5' r='2.5'/%3E%3Ccircle cx='17.5' cy='17.5' r='2.5'/%3E%3E%3Cpath d='M5 9h14'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  height: 100%;
+  animation: animateBus 30s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes animateBus {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+/* Row hover effect */
+tr.hover\:bg-gray-50:hover {
+  background-color: rgba(236, 246, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* Highlight effect for active rows */
+tr.active-row {
+  animation: highlight 2s ease-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(219, 234, 254, 0.7);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Pulse animation for search icon */
+.search-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Suggestion hover effect */
+.suggestion-item:hover {
+  background-color: #EFF6FF;
+  transition: all 0.2s ease;
+}
