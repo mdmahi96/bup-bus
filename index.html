@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BUP Express</title>
+  <title>About</title>
   <link rel="icon" type="image/x-icon" href="bus.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
@@ -21,10 +21,10 @@
             <h1 class="text-2xl font-bold tracking-tight">BUP Express</h1>
 			<img src="bus.png" class="profile-img" style="width:10%; margin:-99px auto;" align="right">
           </div>
-          <div class="hidden md:flex items-center space-x-8">
-		    <a href="index.html" class="hover:text-blue-200 transition-colors">Home</a>
-            <a href="route.html" class="hover:text-blue-200 transition-colors">Routes</a>
-			<a href="about.html" class="hover:text-blue-200 transition-colors">About</a>
+           <div>
+		    <a href="index.html" class="hover:text-blue-200 transition-colors" style="margin-right: 5px;" >Home</a>
+            <a href="route.html" class="hover:text-blue-200 transition-colors" style="margin-right: 5px;" >Routes</a>
+			<a href="about.html" class="hover:text-blue-200 transition-colors" style="margin-right: 5px;" >About</a>
             <a href="https://mdmahi96.github.io/mahi.com/?i=1" class="hover:text-blue-200 transition-colors">Contact</a>
           </div>
         </div>
@@ -36,6 +36,21 @@
 	
 	
 	
+	   <div class="container">
+    <h1>About BUP Express</h1>
+    <p>Welcome to <strong>BUP Express</strong> – your go-to digital platform for navigating bus routes and schedules for Bangladesh University of Professionals students.</p>
+    
+    <p>This <strong>unofficial student-run website</strong> makes it easy to find bus routes and timings by simply searching your stoppage name. No more struggling with physical notice boards or missed updates!</p>
+    
+    <pre>Our key features include:
+        • Quick search for bus routes
+        • Detailed stoppage information
+    </pre>
+    
+    <p class="disclaimer">⚠️ <strong>Important Notice:</strong> This is not an official website. Bus schedules, routes, and other information are subject to change. Always refer to the official MT Section notice for the most accurate and latest updates.</p>
+    
+    <p class="footer">Explore, stay informed, and help us improve the platform by sharing your feedback! 🚌</p>
+</div>
 	
 	
 	
@@ -44,119 +59,8 @@
 	
 	
 	
-	  <!-- Search section -->
-    <div class="p-6 bg-gray-50 border-b border-gray-200">
-      <div class="relative max-w-2xl mx-auto">
-        <div class="flex shadow-md rounded-lg overflow-hidden animate__animated animate__fadeIn animate__delay-0s">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Enter stoppage name..."
-            class="w-full p-4 border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
-          >
-          <button 
-            id="search-button"
-            class="bg-blue-700 text-white px-6 hover:bg-blue-800 transition duration-200 flex items-center justify-center"
-            aria-label="Search"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            <span class="ml-2 hidden md:inline">Search</span>
-          </button>
-        </div>
-        
-        <div id="suggestion-container" class="absolute z-10 w-full bg-white border border-gray-300 rounded-b-lg shadow-lg max-h-64 overflow-y-auto mt-1 hidden">
-          <!-- Suggestions will be populated here -->
-        </div>
-      </div>
-    </div>
+	
 
-    <!-- Results section -->
-    <div class="p-6">
-      <div id="results-container">
-        <!-- Initial message -->
-        <div id="initial-message" class="text-center p-10 bg-gray-50 rounded-lg border border-gray-200 animate__animated animate__fadeIn">
-          <div class="mb-6">
-            <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 9 20-5v12L2 21V9Z"/><path d="M6 12v5"/><path d="M10 9v9"/></svg>
-            </div>
-          </div>
-          <h3 class="text-xl font-medium text-gray-800">Search for Stoppages</h3>
-          <p class="text-gray-500 mt-2">Enter a stoppage name to find associated bus routes</p>
-        </div>
-        
-        <!-- No results message (initially hidden) -->
-        <div id="no-results" class="text-center p-10 bg-gray-50 rounded-lg border border-gray-200 hidden animate__animated animate__fadeIn">
-          <div class="text-gray-400 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto opacity-50"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          </div>
-          <p class="text-gray-700 font-medium text-lg">No buses found for "<span id="no-results-term"></span>"</p>
-          <p class="text-gray-500 mt-2">Please try searching for another stoppage</p>
-        </div>
-        
-        <!-- Results table (initially hidden) -->
-        <div id="results-table-container" class="hidden animate__animated animate__fadeIn">
-          <div class="flex items-center mb-4">
-            <div class="w-2 h-6 bg-blue-600 mr-3"></div>
-            <h2 class="text-xl font-semibold text-gray-800">Buses via <span id="selected-stoppage" class="text-blue-700"></span></h2>
-          </div>
-          
-          <!-- Sort options -->
-          <div class="mb-4 flex flex-wrap gap-2">
-            <div class="text-sm text-gray-600 flex items-center mr-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h10"/><path d="M11 8h7"/><path d="M11 12h4"/></svg>
-              Sort by:
-            </div>
-            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="routeNo">Route No</button>
-            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="morning">Noon Time</button>
-            <button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="noon">Morning Time</button>
-			</div>
-            <!--button class="sort-button px-3 py-1 text-sm rounded border border-gray-300 hover:bg-blue-50 transition-colors" data-sort="afternoon"></button>
-          
-		 
-          
-          <!-- Note about times -->
-          <div class="mb-4 p-3 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm rounded">
-            <div class="flex items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-              <span><strong>Note:</strong> Times shown are for starting point location of each route.</span>
-            </div>
-          </div>
-          
-          <div class="overflow-x-auto rounded-lg shadow">
-            <table class="min-w-full divide-y divide-gray-200">
-              <thead class="bg-gray-100">
-                <tr>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route No.</th>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bus No.</th>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route</th>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Morning</th>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Noon</th>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Afternoon</th>
-                  <th class="py-3 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Driver Contact</th>
-                </tr>
-              </thead>
-              <tbody id="results-table-body" class="bg-white divide-y divide-gray-200">
-                <!-- Results will be populated here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 
