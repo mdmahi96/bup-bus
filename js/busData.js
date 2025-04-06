@@ -370,8 +370,8 @@ const busRoutes = [
     busNo: "0424+0471",
     route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
-    noon: "",
-    afternoon: "2:00 pm",
+    noon: "2:00 pm",
+    afternoon: "",
     driver: ""
   },
   {
@@ -380,8 +380,8 @@ const busRoutes = [
     busNo: "0301+0402",
     route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
-    noon: "",
-    afternoon: "2:00 pm",
+    noon: "2:00 pm",
+    afternoon: "",
     driver: ""
   },
   {
@@ -390,8 +390,8 @@ const busRoutes = [
     busNo: "0426+0300",
     route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
-    noon: "",
-    afternoon: "2:10 pm",
+    noon: "2:10 pm",
+    afternoon: "",
     driver: ""
   },
   {
@@ -430,8 +430,8 @@ const busRoutes = [
     busNo: "0424+0471",
     route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
-    noon: "",
-    afternoon: "2:40 pm",
+    noon: "2:40 pm",
+    afternoon: "",
     driver: ""
   },
   {
@@ -440,8 +440,8 @@ const busRoutes = [
     busNo: "0301+0402",
     route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
-    noon: "",
-    afternoon: "2:45 pm",
+    noon: "2:45 pm",
+    afternoon: "",
     driver: ""
   },
   {
@@ -450,8 +450,8 @@ const busRoutes = [
     busNo: "0426+0300",
     route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
-    noon: "",
-    afternoon: "2:50 pm",
+    noon: "2:50 pm",
+    afternoon: "",
     driver: ""
   },
   {
