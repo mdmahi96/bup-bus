@@ -1,72 +1,40 @@
 const busRoutes = [
-  // Route Bus 1
+  // Main Routes
   {
     routeType: "Route Bus",
     routeNo: "1",
     busNo: "470",
-    route: "Route 1: House Building - Azimpur - Rajlaxmi - Jasimuddin - Airport - Kawla - Khilkhet - Sheora - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "House Building → Azimpur → Rajlaxmi → Jasimuddin → Airport → Kawla → Khilkhet → Sheora → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "7:00 am",
     noon: "",
     afternoon: "",
-    driver: "Israfil - 01921195966, Sharif - 01718445521"
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "1",
-    busNo: "470",
-    route: "Route 1 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Sheora - Khilkhet - Kawla - Airport - Jasimuddin - Rajlaxmi - Azimpur - House Building",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: "Barek - 01743941318, Mostaf - 01710511060, Ashraf - 01766110564"
+    driver: ""
   },
   {
     routeType: "Route Bus",
     routeNo: "1",
     busNo: "472",
-    route: "Route 1: House Building - Azimpur - Rajlaxmi - Jasimuddin - Airport - Kawla - Khilkhet - Sheora - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "House Building → Azimpur → Rajlaxmi → Jasimuddin → Airport → Kawla → Khilkhet → Sheora → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "7:00 am",
     noon: "",
     afternoon: "",
-    driver: "Barek - 01743941318, Mostaf - 01710511060, Ashraf - 01766110564"
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "1",
-    busNo: "472",
-    route: "Route 1 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Sheora - Khilkhet - Kawla - Airport - Jasimuddin - Rajlaxmi - Azimpur - House Building",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: "Jishm - 01842019252"
-  },
-  
-  // Route Bus 2
-  {
-    routeType: "Route Bus",
-    routeNo: "2",
-    busNo: "352",
-    route: "Route 2: Kakrail - Mouchak - Malibagh Railgate - Abul Hotel - Rampura Bazar - Rampura Bridge - Middle Badda - Gulshan Link Road - North Badda - Shahjadpur - Jamuna Future Park - Sheora - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
-    morning: "6:40 am",
-    noon: "",
-    afternoon: "",
-    driver: "Jishm - 01842019252"
+    driver: ""
   },
   {
     routeType: "Route Bus",
     routeNo: "2",
     busNo: "353",
-    route: "Route 2 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Sheora - Jamuna Future Park - Shahjadpur - North Badda - Gulshan Link Road - Middle Badda - Rampura Bridge - Rampura Bazar - Abul Hotel - Malibagh Railgate - Mouchak - Kakrail",
-    morning: "",
+    route: "Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Middle Badda → Gulshan Link Road → North Badda → Shahjadpur → Jamuna Future Park → Sheora → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
+    morning: "6:40 am",
     noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
+    afternoon: "",
     driver: ""
   },
   {
     routeType: "Route Bus",
     routeNo: "2",
     busNo: "354",
-    route: "Route 2: Kakrail - Mouchak - Malibagh Railgate - Abul Hotel - Rampura Bazar - Rampura Bridge - Middle Badda - Gulshan Link Road - North Badda - Shahjadpur - Jamuna Future Park - Sheora - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Middle Badda → Gulshan Link Road → North Badda → Shahjadpur → Jamuna Future Park → Sheora → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "6:50 am",
     noon: "",
     afternoon: "",
@@ -75,40 +43,8 @@ const busRoutes = [
   {
     routeType: "Route Bus",
     routeNo: "2",
-    busNo: "354",
-    route: "Route 2 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Sheora - Jamuna Future Park - Shahjadpur - North Badda - Gulshan Link Road - Middle Badda - Rampura Bridge - Rampura Bazar - Abul Hotel - Malibagh Railgate - Mouchak - Kakrail",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "2",
     busNo: "494",
-    route: "Route 2: Kakrail - Mouchak - Malibagh Railgate - Abul Hotel - Rampura Bazar - Rampura Bridge - Middle Badda - Gulshan Link Road - North Badda - Shahjadpur - Jamuna Future Park - Sheora - ECB Circle - Kalshi - ECB Canteen - Mirpur 12- BUP",
-    morning: "7:00 am",
-    noon: "",
-    afternoon: "",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "2",
-    busNo: "494",
-    route: "Route 2 (Return): BUP - Mirpur 12- ECB Canteen - Kalshi - ECB Circle - Sheora - Jamuna Future Park - Shahjadpur - North Badda - Gulshan Link Road - Middle Badda - Rampura Bridge - Rampura Bazar - Abul Hotel - Malibagh Railgate - Mouchak - Kakrail",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  
-  // Route Bus 3
-  {
-    routeType: "Route Bus",
-    routeNo: "3",
-    busNo: "293",
-    route: "Route 3: Moghbazar - Hatirjheel - Satrasta Mor - Nabisco - Mohakhali - Chairman Bari - Kakoli - Navy HQ - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "Kakrail → Mouchak → Malibagh Railgate → Abul Hotel → Rampura Bazar → Rampura Bridge → Middle Badda → Gulshan Link Road → North Badda → Shahjadpur → Jamuna Future Park → Sheora → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → Mirpur 12  →  BUP",
     morning: "7:00 am",
     noon: "",
     afternoon: "",
@@ -118,19 +54,17 @@ const busRoutes = [
     routeType: "Route Bus",
     routeNo: "3",
     busNo: "293",
-    route: "Route 3 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Navy HQ - Kakoli - Chairman Bari - Mohakhali - Nabisco - Satrasta Mor - Hatirjheel - Moghbazar",
-    morning: "",
+    route: "Moghbazar → Hatirjheel → Satrasta Mor → Nabisco → Mohakhali → Chairman Bari → Kakoli → Navy HQ → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
+    morning: "7:00 am",
     noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
+    afternoon: "",
     driver: ""
   },
-  
-  // Route Bus 4
   {
     routeType: "Route Bus",
     routeNo: "4",
     busNo: "292",
-    route: "Route 4: Jahangir Gate - Shaheen Cinema Hall - Workshop - Adamjee - Post Office - Army HQ - CMH - Matikata - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "Jahangir Gate → Shaheen Cinema Hall → Workshop → Adamjee → Post Office → Army HQ → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "7:10 am",
     noon: "",
     afternoon: "",
@@ -139,18 +73,8 @@ const busRoutes = [
   {
     routeType: "Route Bus",
     routeNo: "4",
-    busNo: "292",
-    route: "Route 4 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Matikata - CMH - Army HQ - Post Office - Adamjee - Workshop - Shaheen Cinema Hall - Jahangir Gate",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "4",
     busNo: "401",
-    route: "Route 4: Jahangir Gate - Shaheen Cinema Hall - Workshop - Adamjee - Post Office - Army HQ - CMH - Matikata - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "Jahangir Gate → Shaheen Cinema Hall → Workshop → Adamjee → Post Office → Army HQ → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "7:20 am",
     noon: "",
     afternoon: "",
@@ -158,21 +82,9 @@ const busRoutes = [
   },
   {
     routeType: "Route Bus",
-    routeNo: "4",
-    busNo: "401",
-    route: "Route 4 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Matikata - CMH - Army HQ - Post Office - Adamjee - Workshop - Shaheen Cinema Hall - Jahangir Gate",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  
-  // Route Bus 5
-  {
-    routeType: "Route Bus",
     routeNo: "5",
     busNo: "300",
-    route: "Route 5: Shahbagh - Banglamotor - Kawran Bazar - Farmgate - Jahangir Gate - Shaheen Cinema Hall - Workshop - Adamjee - Post Office - Army HQ - CMH - Matikata - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "Shahbagh → Banglamotor → Kawran Bazar → Farmgate → Jahangir Gate → Shaheen Cinema Hall → Workshop → Adamjee → Post Office → Army HQ → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "7:00 am",
     noon: "",
     afternoon: "",
@@ -181,18 +93,8 @@ const busRoutes = [
   {
     routeType: "Route Bus",
     routeNo: "5",
-    busNo: "300",
-    route: "Route 5 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Matikata - CMH - Army HQ - Post Office - Adamjee - Workshop - Shaheen Cinema Hall - Jahangir Gate - Farmgate - Kawran Bazar - Banglamotor - Shahbagh",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "5",
     busNo: "426",
-    route: "Route 5: Shahbagh - Banglamotor - Kawran Bazar - Farmgate - Jahangir Gate - Shaheen Cinema Hall - Workshop - Adamjee - Post Office - Army HQ - CMH - Matikata - ECB Circle - Kalshi - ECB Canteen - DOHS - BUP",
+    route: "Shahbagh → Banglamotor → Kawran Bazar → Farmgate → Jahangir Gate → Shaheen Cinema Hall → Workshop → Adamjee → Post Office → Army HQ → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "7:05 am",
     noon: "",
     afternoon: "",
@@ -200,21 +102,9 @@ const busRoutes = [
   },
   {
     routeType: "Route Bus",
-    routeNo: "5",
-    busNo: "426",
-    route: "Route 5 (Return): BUP - DOHS - ECB Canteen - Kalshi - ECB Circle - Matikata - CMH - Army HQ - Post Office - Adamjee - Workshop - Shaheen Cinema Hall - Jahangir Gate - Farmgate - Kawran Bazar - Banglamotor - Shahbagh",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  
-  // Route Bus 6
-  {
-    routeType: "Route Bus",
     routeNo: "6",
     busNo: "291",
-    route: "Route 6: Khamarbari Mor - Chandrima Udyan - Agricultural University Shelter - Agargaon - Taltola - Shewrapara - Kazipara - Mirpur 10 - Mirpur 11 - Mirpur 11.5 - Mirpur 12 - BUP",
+    route: "Khamarbari Mor → Chandrima Udyan → Agricultural University Shelter → Agargaon → Taltola → Shewrapara → Kazipara → Mirpur 10 → Mirpur 11 → Mirpur 11.5 → Mirpur 12 → BUP",
     morning: "6:50 am",
     noon: "",
     afternoon: "",
@@ -223,18 +113,8 @@ const busRoutes = [
   {
     routeType: "Route Bus",
     routeNo: "6",
-    busNo: "291",
-    route: "Route 6 (Return): BUP - Mirpur 12 - Mirpur 11.5 - Mirpur 11 - Mirpur 10 - Kazipara - Shewrapara - Taltola - Agargaon - Agricultural University Shelter - Chandrima Udyan - Khamarbari Mor",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "6",
     busNo: "295",
-    route: "Route 6: Khamarbari Mor - Chandrima Udyan - Agricultural University Shelter - Agargaon - Taltola - Shewrapara - Kazipara - Mirpur 10 - Mirpur 11 - Mirpur 11.5 - Mirpur 12 - BUP",
+    route: "Khamarbari Mor → Chandrima Udyan → Agricultural University Shelter → Agargaon → Taltola → Shewrapara → Kazipara → Mirpur 10 → Mirpur 11 → Mirpur 11.5 → Mirpur 12 → BUP",
     morning: "7:00 am",
     noon: "",
     afternoon: "",
@@ -242,21 +122,9 @@ const busRoutes = [
   },
   {
     routeType: "Route Bus",
-    routeNo: "6",
-    busNo: "295",
-    route: "Route 6 (Return): BUP - Mirpur 12 - Mirpur 11.5 - Mirpur 11 - Mirpur 10 - Kazipara - Shewrapara - Taltola - Agargaon - Agricultural University Shelter - Chandrima Udyan - Khamarbari Mor",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  
-  // Route Bus 7
-  {
-    routeType: "Route Bus",
     routeNo: "7",
     busNo: "301",
-    route: "Route 7: Asadgate Residential School & College - Shia Mosque - Suchona Community Center - Adabor Thana - Shyamoli - Kallyanpur - Technical - Bangla College - Ansar Camp - Mirpur 1 - Sony Cinema Hall - Commerce College - Training - Mirpur 11 - Mirpur 11.5 - Mirpur 12 - BUP",
+    route: "Asadgate Residential School & College → Shia Mosque → Suchona Community Center → Adabor Thana → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Sony Cinema Hall → Commerce College → Training → Mirpur 11 → Mirpur 11.5 → Mirpur 12 → BUP",
     morning: "6:50 am",
     noon: "",
     afternoon: "",
@@ -265,40 +133,18 @@ const busRoutes = [
   {
     routeType: "Route Bus",
     routeNo: "7",
-    busNo: "301",
-    route: "Route 7 (Return): BUP - Mirpur 12 - Mirpur 11.5 - Mirpur 11 - Training - Commerce College - Sony Cinema Hall - Mirpur 1 - Ansar Camp - Bangla College - Technical - Kallyanpur - Shyamoli - Adabor Thana - Suchona Community Center - Shia Mosque - Asadgate Residential School & College",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "7",
     busNo: "402",
-    route: "Route 7: Asadgate Residential School & College - Shia Mosque - Suchona Community Center - Adabor Thana - Shyamoli - Kallyanpur - Technical - Bangla College - Ansar Camp - Mirpur 1 - Sony Cinema Hall - Commerce College - Training - Mirpur 11 - Mirpur 11.5 - Mirpur 12 - BUP",
+    route: "Asadgate Residential School & College → Shia Mosque → Suchona Community Center → Adabor Thana → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Sony Cinema Hall → Commerce College → Training → Mirpur 11 → Mirpur 11.5 → Mirpur 12 → BUP",
     morning: "7:00 am",
     noon: "",
     afternoon: "",
     driver: ""
   },
-  {
-    routeType: "Route Bus",
-    routeNo: "7",
-    busNo: "402",
-    route: "Route 7 (Return): BUP - Mirpur 12 - Mirpur 11.5 - Mirpur 11 - Training - Commerce College - Sony Cinema Hall - Mirpur 1 - Ansar Camp - Bangla College - Technical - Kallyanpur - Shyamoli - Adabor Thana - Suchona Community Center - Shia Mosque - Asadgate Residential School & College",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  
-  // Route Bus 8
   {
     routeType: "Route Bus",
     routeNo: "8",
     busNo: "424",
-    route: "Route 8: City College - BGB Gate 4 - Dhanmondi 15 - Shankar - 27 Rapa Plaza - Asadgate - College Gate - Shyamoli - Kallyanpur - Technical - Bangla College - Ansar Camp - Mirpur 1 - Sony Cinema Hall - Commerce College - Training - Mirpur 11 - Mirpur 11.5 - Mirpur 12 - BUP",
+    route: "City College → BGB Gate 4 → Dhanmondi 15 → Shankar → 27 Rapa Plaza → Asadgate → College Gate → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Sony Cinema Hall → Commerce College → Training → Mirpur 11 → Mirpur 11.5 → Mirpur 12 → BUP",
     morning: "6:40 am",
     noon: "",
     afternoon: "",
@@ -307,31 +153,183 @@ const busRoutes = [
   {
     routeType: "Route Bus",
     routeNo: "8",
-    busNo: "424",
-    route: "Route 8 (Return): BUP - Mirpur 12 - Mirpur 11.5 - Mirpur 11 - Training - Commerce College - Sony Cinema Hall - Mirpur 1 - Ansar Camp - Bangla College - Technical - Kallyanpur - Shyamoli - College Gate - Asadgate - 27 Rapa Plaza - Shankar - Dhanmondi 15 - BGB Gate 4 - City College",
-    morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
-    driver: ""
-  },
-  {
-    routeType: "Route Bus",
-    routeNo: "8",
     busNo: "471",
-    route: "Route 8: City College - BGB Gate 4 - Dhanmondi 15 - Shankar - 27 Rapa Plaza - Asadgate - College Gate - Shyamoli - Kallyanpur - Technical - Bangla College - Ansar Camp - Mirpur 1 - Sony Cinema Hall - Commerce College - Training - Mirpur 11 - Mirpur 11.5 - Mirpur 12 - BUP",
+    route: "City College → BGB Gate 4 → Dhanmondi 15 → Shankar → 27 Rapa Plaza → Asadgate → College Gate → Shyamoli → Kallyanpur → Technical → Bangla College → Ansar Camp → Mirpur 1 → Sony Cinema Hall → Commerce College → Training → Mirpur 11 → Mirpur 11.5 → Mirpur 12 → BUP",
     morning: "6:50 am",
     noon: "",
     afternoon: "",
     driver: ""
   },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // Return Routes
+  {
+    routeType: "Route Bus",
+    routeNo: "1",
+    busNo: "470",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Sheora → Khilkhet → Kawla → Airport → Jasimuddin → Rajlaxmi → Azimpur → House Building",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "1",
+    busNo: "472",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Sheora → Khilkhet → Kawla → Airport → Jasimuddin → Rajlaxmi → Azimpur → House Building",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "2",
+    busNo: "353",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Sheora → Jamuna Future Park → Shahjadpur → North Badda → Gulshan Link Road → Middle Badda → Rampura Bridge → Rampura Bazar → Abul Hotel → Malibagh Railgate → Mouchak → Kakrail",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "2",
+    busNo: "354",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Sheora → Jamuna Future Park → Shahjadpur → North Badda → Gulshan Link Road → Middle Badda → Rampura Bridge → Rampura Bazar → Abul Hotel → Malibagh Railgate → Mouchak → Kakrail",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "2",
+    busNo: "494",
+    route: "Return Bus → BUP → Mirpur 12 → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Sheora → Jamuna Future Park → Shahjadpur → North Badda → Gulshan Link Road → Middle Badda → Rampura Bridge → Rampura Bazar → Abul Hotel → Malibagh Railgate → Mouchak → Kakrail",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "3",
+    busNo: "293",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Navy HQ → Kakoli → Chairman Bari → Mohakhali → Nabisco → Satrasta Mor → Hatirjheel → Moghbazar",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "4",
+    busNo: "292",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army HQ → Post Office → Adamjee → Workshop → Shaheen Cinema Hall → Jahangir Gate",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "4",
+    busNo: "401",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army HQ → Post Office → Adamjee → Workshop → Shaheen Cinema Hall → Jahangir Gate",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "5",
+    busNo: "300",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army HQ → Post Office → Adamjee → Workshop → Shaheen Cinema Hall → Jahangir Gate → Farmgate → Kawran Bazar → Banglamotor → Shahbagh",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "5",
+    busNo: "426",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army HQ → Post Office → Adamjee → Workshop → Shaheen Cinema Hall → Jahangir Gate → Farmgate → Kawran Bazar → Banglamotor → Shahbagh",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "6",
+    busNo: "291",
+    route: "Return Bus → BUP → Mirpur 12 → Mirpur 11.5 → Mirpur 11 → Mirpur 10 → Kazipara → Shewrapara → Taltola → Agargaon → Agricultural University Shelter → Chandrima Udyan → Khamarbari Mor",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "6",
+    busNo: "295",
+    route: "Return Bus → BUP → Mirpur 12 → Mirpur 11.5 → Mirpur 11 → Mirpur 10 → Kazipara → Shewrapara → Taltola → Agargaon → Agricultural University Shelter → Chandrima Udyan → Khamarbari Mor",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "7",
+    busNo: "301",
+    route: "Return Bus → BUP → Mirpur 12 → Mirpur 11.5 → Mirpur 11 → Training → Commerce College → Sony Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → Adabor Thana → Suchona Community Center → Shia Mosque → Asadgate Residential School & College",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "7",
+    busNo: "402",
+    route: "Return Bus → BUP → Mirpur 12 → Mirpur 11.5 → Mirpur 11 → Training → Commerce College → Sony Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → Adabor Thana → Suchona Community Center → Shia Mosque → Asadgate Residential School & College",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
+  {
+    routeType: "Route Bus",
+    routeNo: "8",
+    busNo: "424",
+    route: "Return Bus → BUP → Mirpur 12 → Mirpur 11.5 → Mirpur 11 → Training → Commerce College → Sony Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → College Gate → Asadgate → 27 Rapa Plaza → Shankar → Dhanmondi 15 → BGB Gate 4 → City College",
+    morning: "",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
+    driver: ""
+  },
   {
     routeType: "Route Bus",
     routeNo: "8",
     busNo: "471",
-    route: "Route 8 (Return): BUP - Mirpur 12 - Mirpur 11.5 - Mirpur 11 - Training - Commerce College - Sony Cinema Hall - Mirpur 1 - Ansar Camp - Bangla College - Technical - Kallyanpur - Shyamoli - College Gate - Asadgate - 27 Rapa Plaza - Shankar - Dhanmondi 15 - BGB Gate 4 - City College",
+    route: "Return Bus → BUP → Mirpur 12 → Mirpur 11.5 → Mirpur 11 → Training → Commerce College → Sony Cinema Hall → Mirpur 1 → Ansar Camp → Bangla College → Technical → Kallyanpur → Shyamoli → College Gate → Asadgate → 27 Rapa Plaza → Shankar → Dhanmondi 15 → BGB Gate 4 → City College",
     morning: "",
-    noon: "",
-    afternoon: "3:40 pm, 5:40 pm",
+    noon: "3:40 pm",
+    afternoon: "5:40 pm",
     driver: ""
   },
   
@@ -340,7 +338,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0353+0569",
-    route: "BUP → DOHS → ECB Canteen (Pallabi Police Station) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
     noon: "12:00 pm",
     afternoon: "",
@@ -350,7 +348,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0494+0300",
-    route: "BUP → DOHS → ECB Canteen (Pallabi Police Station) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
     noon: "12:00 pm",
     afternoon: "",
@@ -360,7 +358,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0426+0301",
-    route: "BUP → DOHS → ECB Canteen (Pallabi Police Station) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
     noon: "12:15 pm",
     afternoon: "",
@@ -370,7 +368,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0424+0471",
-    route: "BUP → DOHS → ECB Canteen (Pallabi Police Station) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
     noon: "",
     afternoon: "2:00 pm",
@@ -380,7 +378,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0301+0402",
-    route: "BUP → DOHS → ECB Canteen (Pallabi Police Station) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
     noon: "",
     afternoon: "2:00 pm",
@@ -390,7 +388,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0426+0300",
-    route: "BUP → DOHS → ECB Canteen (Pallabi Police Station) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
+    route: "Return Bus → BUP → DOHS → ECB Canteen (Pallabi PS) → Kalshi → ECB Square → Matikata → CMH → Army Head Quarters → Post Office → Adamjee → Workshop → Jahangir Gate",
     morning: "",
     noon: "",
     afternoon: "2:10 pm",
@@ -400,7 +398,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0353+0569",
-    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi Police Station) → DOHS → BUP",
+    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
     noon: "1:00 pm",
     afternoon: "",
@@ -410,7 +408,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0494+0300",
-    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi Police Station) → DOHS → BUP",
+    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
     noon: "1:05 pm",
     afternoon: "",
@@ -420,7 +418,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0426+0301",
-    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi Police Station) → DOHS → BUP",
+    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
     noon: "1:10 pm",
     afternoon: "",
@@ -430,7 +428,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0424+0471",
-    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi Police Station) → DOHS → BUP",
+    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
     noon: "",
     afternoon: "2:40 pm",
@@ -440,7 +438,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0301+0402",
-    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi Police Station) → DOHS → BUP",
+    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
     noon: "",
     afternoon: "2:45 pm",
@@ -450,7 +448,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "0426+0300",
-    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi Police Station) → DOHS → BUP",
+    route: "Jahangir Gate → Workshop → Adamjee → Post Office → Army Head Quarters → CMH → Matikata → ECB Square → Kalshi → ECB Canteen (Pallabi PS) → DOHS → BUP",
     morning: "",
     noon: "",
     afternoon: "2:50 pm",
@@ -500,7 +498,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "494",
-    route: "BUP → Jahangir Gate",
+    route: "Return Bus → BUP → Jahangir Gate",
     morning: "9:10 am",
     noon: "",
     afternoon: "",
@@ -510,7 +508,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "13",
     busNo: "471",
-    route: "BUP → Jahangir Gate",
+    route: "Return Bus → BUP → Jahangir Gate",
     morning: "9:15 am",
     noon: "",
     afternoon: "",
@@ -522,7 +520,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "14",
     busNo: "0291+0293+0296",
-    route: "BUP → DOHS",
+    route: "Return Bus → BUP → DOHS",
     morning: "8:00 am",
     noon: "",
     afternoon: "",
@@ -532,9 +530,9 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "14",
     busNo: "0296",
-    route: "BUP → DOHS",
-    morning: "",
-    noon: "11:15 am",
+    route: "Return Bus → BUP → DOHS",
+    morning: "11:15 am",
+    noon: "",
     afternoon: "",
     driver: ""
   },
@@ -542,7 +540,7 @@ const busRoutes = [
     routeType: "Shuttle Bus",
     routeNo: "14",
     busNo: "0294",
-    route: "BUP → DOHS",
+    route: "Return Bus → BUP → DOHS",
     morning: "",
     noon: "1:15 pm",
     afternoon: "",
@@ -563,8 +561,8 @@ const busRoutes = [
     routeNo: "14",
     busNo: "0296",
     route: "DOHS → BUP",
-    morning: "",
-    noon: "11:30 am",
+    morning: "11:30 am",
+    noon: "",
     afternoon: "",
     driver: ""
   },
@@ -578,43 +576,50 @@ const busRoutes = [
     afternoon: "",
     driver: ""
   },
+  
+  // Shuttle Bus 15
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "292+294+962",
-    route: "BUP → Mirpur 12",
+    route: "Return Bus → BUP → Mirpur 12",
     morning: "8:00 am",
     noon: "12:10 pm",
     afternoon: "",
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "292 / 291+295",
-    route: "BUP → Mirpur 12",
+    route: "Return Bus → BUP → Mirpur 12",
     morning: "9:15 am",
     noon: "1:15 pm",
     afternoon: "",
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "962",
-    route: "BUP → Mirpur 12",
+    route: "Return Bus → BUP → Mirpur 12",
     morning: "10:15 am",
     noon: "2:00 pm",
     afternoon: "5:40 pm",
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "295",
-    route: "BUP → Mirpur 12",
+    route: "Return Bus → BUP → Mirpur 12",
     morning: "11:15 am",
     noon: "3:40 pm",
     afternoon: "",
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "0292+4962+0295",
     route: "Mirpur 12 → BUP",
@@ -624,6 +629,7 @@ const busRoutes = [
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "0294",
     route: "Mirpur 12 → BUP",
@@ -633,6 +639,7 @@ const busRoutes = [
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "4962",
     route: "Mirpur 12 → BUP",
@@ -642,6 +649,7 @@ const busRoutes = [
     driver: ""
   },
   {
+    routeType: "Shuttle Bus",
     routeNo: "15",
     busNo: "0295",
     route: "Mirpur 12 → BUP",
@@ -651,6 +659,7 @@ const busRoutes = [
     driver: ""
   }
 ];
+
 
 // Helper function to format the data in a more readable way
 function formatBusSchedule(routes) {
@@ -687,7 +696,7 @@ function formatBusSchedule(routes) {
 
 const formattedBusData = formatBusSchedule(busRoutes);
 
-// Example usage - Log the formatted data for route 13
+// Example usage  -  Log the formatted data for route 13
 // console.log(JSON.stringify(formattedBusData['13'], null, 2));
 
 // Export both raw and formatted data
